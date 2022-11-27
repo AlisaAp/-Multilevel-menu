@@ -81,7 +81,23 @@ body {
   display: block;
   padding: 10px 0;
 }
-
+.footer_m {
+  background-color: rgba(2, 5, 9, 1);
+  padding: 10px 20px;
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  line-height: 10px;
+}
+.footer_m > a:hover .icon {
+  fill: rgb(249, 180, 62);
+}
+.icon {
+  fill: rgb(255, 255, 255);
+  width: 30px;
+  height: 30px;
+}
 /* gallery*/
 
 .gallery_page {
@@ -337,7 +353,8 @@ tr {
 /* layout*/
 .header,
 .section_3,
-.footer {
+.footer,
+.footer_m {
   background-color: rgba(2, 5, 9, 1);
 }
 
