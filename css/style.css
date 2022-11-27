@@ -13,6 +13,8 @@ body {
 }
 .main_container > div {
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .main_header_list {
@@ -56,7 +58,7 @@ body {
   display: block;
 }
 .main_header_list > li:hover {
-  font-weight: 700;
+  text-shadow: 0px 0px 1px rgb(255, 255, 255);
 }
 
 .hover_list > li:hover,
