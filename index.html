@@ -1,77 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Main page</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <div class="main_page">
-      <div class="header">
-        <div class="main_container">
-          <div><a class="logo" href="#">Logo</a></div>
-          <ul class="main_header_list">
-            <li><a href="#">Main page</a></li>
-            <li><a href="gallery/index.html" target="_blank">Gallery</a></li>
-            <li class="homework">
-              <a href="#">Homework</a>
+<head>
+  <meta charset="UTF-8" />
+  <title>Main page</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+</head>
 
-              <ul class="hover_list">
-                <li><a href="table/index.html" target="_blank"> table </a></li>
-                <li><a href="cards/index.html" target="_blank"> cards </a></li>
-                <li><a href="float/index.html" target="_blank"> float </a></li>
-                <li class="layout">
-                  <a href="#"> layout </a>
-                  <ul class="hover_list_2">
-                    <li>
-                      <a href="layout/index.html" target="_blank">
-                        first site
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"> second site </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+<body>
+  <div class="main_page">
+    <div class="header">
+      <div class="main_container">
+        <div><a class="logo" href="#">Logo</a></div>
+        <ul class="main_header_list">
+          <li>
+            <a href="#"><svg class="icon_h">
+                <use href="images/icons/sprite.svg#home"></use>
+              </svg>
+              Main page
+            </a>
+          </li>
+          <li>
+            <a href="gallery/index.html" target="_blank"><svg class="icon_h">
+                <use href="images/icons/sprite.svg#gallery"></use>
+              </svg>Gallery</a>
+          </li>
+          <li class="homework">
+            <a href="#">
+              Homework
+              <svg class="icon_h icon_r">
+                <use href="images/icons/sprite.svg#arrow_d"></use>
+              </svg></a>
+
+            <ul class="hover_list">
+              <li><a href="table/index.html" target="_blank"> table </a></li>
+              <li><a href="cards/index.html" target="_blank"> cards </a></li>
+              <li><a href="float/index.html" target="_blank"> float </a></li>
+              <li class="layout">
+                <a href="#">
+                  <svg class="icon_h icon_l">
+                    <use href="images/icons/sprite.svg#arrow_l"></use>
+                  </svg>layout
+                </a>
+                <ul class="hover_list_2">
+                  <li>
+                    <a href="layout/index.html" target="_blank">
+                      first site
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"> second site </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="footer_m">
-      <a href="https://uk-ua.facebook.com/" target="_blank">
-        <svg class="icon">
-          <use xlink:href="images/icons/sprite.svg#facebook"></use>
-        </svg>
-      </a>
-      <a href="https://web.telegram.org//" target="_blank">
-        <svg class="icon">
-          <use xlink:href="images/icons/sprite.svg#telegram"></use>
-        </svg>
-      </a>
-      <a href="https://www.viber.com/en//" target="_blank">
-        <svg class="icon">
-          <use xlink:href="images/icons/sprite.svg#viber"></use>
-        </svg>
-      </a>
-      <a href="https://www.linkedin.com/" target="_blank">
-        <svg class="icon">
-          <use xlink:href="images/icons/sprite.svg#linkedin"></use>
-        </svg>
-      </a>
-      <a href="https://www.youtube.com/" target="_blank">
-        <svg class="icon">
-          <use xlink:href="images/icons/sprite.svg#youtube"></use>
-        </svg>
-      </a>
+    <div class="main_content">
+      <h1>MAIN PAGE</h1>
     </div>
-  </body>
+    <div class="footer_m">
+      <ul>
+        <li>
+          <a href="https://uk-ua.facebook.com/" target="_blank">
+            <svg class="icon">
+              <use href="images/icons/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://web.telegram.org//" target="_blank">
+            <svg class="icon">
+              <use href="images/icons/sprite.svg#telegram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.viber.com/en//" target="_blank">
+            <svg class="icon">
+              <use href="images/icons/sprite.svg#viber"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/" target="_blank">
+            <svg class="icon">
+              <use href="images/icons/sprite.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.youtube.com/" target="_blank">
+            <svg class="icon">
+              <use href="images/icons/sprite.svg#youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
 </html>
