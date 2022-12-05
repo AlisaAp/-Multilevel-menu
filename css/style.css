@@ -114,8 +114,10 @@ body {
   padding-top: 200px;
 }
 /* hiden icons*/
+.footer_m {
+  padding-left: calc(100vw - 300px);
+}
 .hidden_menu {
-  margin: 0 auto;
   width: 160px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.382);
@@ -131,6 +133,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 5px;
   transform: rotate(-45deg);
 }
 .hidden_icons > li:hover .icon {
@@ -154,7 +157,7 @@ body {
 }
 
 .hidden_menu:hover {
-  transform: translateY(-160px) scale(1.2);
+  transform: translateY(-148px) scale(1.2);
   background-color: rgba(204, 130, 3, 0.651);
 }
 
