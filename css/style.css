@@ -10,6 +10,7 @@ body {
 
 .main_container {
   position: relative;
+  z-index: 1;
 }
 .main_container > div {
   position: absolute;
@@ -47,9 +48,28 @@ body {
 .main_page {
   width: 100vw;
   height: 100vh;
-  background: url(../images/main_fon_5.jpg) center;
-  background-size: cover;
-  overflow: hidden;
+  background: linear-gradient(
+    149deg,
+    rgba(24, 187, 156, 1) 0%,
+    rgba(106, 57, 175, 1) 42%,
+    rgba(187, 24, 148, 1) 72%,
+    rgba(115, 53, 134, 1) 100%
+  );
+  animation: gradient 10s infinite linear;
+  background-size: 400%;
+  overflow-x: hidden;
+  position: relative;
+}
+@keyframes gradient {
+  0% {
+    background-position: 80% 0%;
+  }
+  50% {
+    background-position: 20% 100%;
+  }
+  100% {
+    background-position: 80% 0%;
+  }
 }
 
 .homework,
@@ -58,7 +78,6 @@ body {
 }
 
 .hover_list {
-  /* display: none;*/
   position: absolute;
   top: -10000%;
   left: 0;
@@ -108,35 +127,56 @@ body {
 }
 
 .main_content {
-  height: calc(100vh - 105px - 48px);
-  text-align: center;
-  font-size: 28px;
-  padding-top: 200px;
+  height: calc(100vh - 105px);
 }
 /* hiden icons*/
-.footer_m {
-  padding-left: calc(100vw - 300px);
-}
+
 .hidden_menu {
+  position: fixed;
+  right: 100px;
+  bottom: 0;
   width: 160px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.382);
-  padding: 15px 15px 25px;
+  background-color: rgba(0, 208, 250, 0);
+  padding: 0 0 40px;
   border-radius: 4px;
-  transition: all 2s;
+  transition: all 1.5s;
+  transform: translateY(calc(100% - 40px));
 }
-.hidden_menu > h3 {
+.hover_me {
   color: white;
+  margin-bottom: 20px;
+  line-height: 45px;
+  animation: hover_me 0.4s linear infinite;
+  background-color: rgba(117, 43, 221, 0.348);
+}
+@keyframes hover_me {
+  0% {
+    transform: translateX(4px);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(4px);
+  }
 }
 .hidden_icons {
-  margin: 30px 20px 0;
+  width: 110px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5px;
+  /*gap: 5px;*/
   transform: rotate(-45deg);
 }
-.hidden_icons > li:hover .icon {
+.hidden_icons > li a:hover .icon {
   fill: rgb(0, 0, 0);
 }
 .icon,
@@ -150,19 +190,82 @@ body {
   transform: rotate(45deg);
 }
 .hidden_icons > li > a {
-  /* border: 2px solid rgb(255, 255, 255);*/
+  /*border: 2px solid rgb(255, 255, 255);*/
   line-height: 0px;
   display: block;
   padding: 6px;
 }
 
 .hidden_menu:hover {
-  transform: translateY(-148px) scale(1.2);
-  background-color: rgba(204, 130, 3, 0.651);
+  transform: translateY(0) scale(1.2);
+  background-color: rgba(117, 43, 221, 0.348);
+  opacity: 1;
 }
 
-/* gallery*/
+.hidden_menu:hover .hover_me {
+  animation: none;
+}
 
+/* animation*/
+.cloud {
+  background: url("/images/cloud.png");
+  width: 280px;
+  height: 250px;
+  animation: cloud 10s linear infinite;
+  position: fixed;
+  top: 60px;
+  left: -200px;
+}
+.cloud + .cloud {
+  top: 180px;
+  left: -700px;
+}
+@keyframes cloud {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(2250px, 0);
+  }
+}
+.cat {
+  background: url("/images/cat.png");
+  width: 400px;
+  height: 200px;
+  animation: cat 1.2s steps(12) infinite;
+  position: fixed;
+  bottom: 47px;
+  left: calc(100vw / 2 - 200px);
+}
+@keyframes cat {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -2396px;
+  }
+}
+.grass {
+  background: url("/images/gr.png");
+  width: 100vw;
+  height: 400px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  animation: grass 10s linear infinite reverse;
+}
+.grass + .grass {
+  left: 1215px;
+}
+@keyframes grass {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-1215px, 0);
+  }
+}
+/* gallery*/
 .gallery_page {
   background-image: url("../gallery/images/fon.jpeg");
   background-size: cover;
